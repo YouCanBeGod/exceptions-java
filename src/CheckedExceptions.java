@@ -4,12 +4,15 @@ import java.io.*;
 public class CheckedExceptions {
 
     public static void main(String[] args) {
-        String nomeDoArquivo = "romances-blake-crouch.txt";
+        String nomeDoArquivo = "romancesblake-crouch.txt";
 
         try {
             imprimirArquivoConsole(nomeDoArquivo);
+        } catch (FileNotFoundException e) {
+            JOptionPane.showMessageDialog(null, "Revise o nome do arquivo. " + e.getCause());
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Revise o nome do arquivo." + e.getCause());
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro inesperado, entre em contato com o suporte! " + e.getCause());
+            e.printStackTrace();
         }
 
         System.out.println("Apesar da exeption o programa continua...");
