@@ -1,12 +1,18 @@
+import javax.swing.*;
 import java.io.*;
 
 public class CheckedExceptions {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         String nomeDoArquivo = "romances-blake-crouch.txt";
-        imprimirArquivoConsole(nomeDoArquivo);
 
-        System.out.println("Apesar da exeption ou não, o programa continua...");
+        try {
+            imprimirArquivoConsole(nomeDoArquivo);
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Revise o nome do arquivo." + e.getCause());
+        }
+
+        System.out.println("Apesar da exeption o programa continua...");
     }
 
     public static void imprimirArquivoConsole(String nomeDoArquivo) throws IOException {
