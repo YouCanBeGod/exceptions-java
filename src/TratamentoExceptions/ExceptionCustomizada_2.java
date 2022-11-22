@@ -17,6 +17,12 @@ public class ExceptionCustomizada_2 {
             } catch (DivisaoNaoExataExcetion e) {
                 e.printStackTrace();
                 JOptionPane.showMessageDialog(null, e.getMessage());
+            } catch (ArithmeticException e) {
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Não é possível realizar divisão por 0. ");
+            } catch (ArrayIndexOutOfBoundsException e) {
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Existem mais denominadores que numeradores.");
             }
         }
 
