@@ -1,10 +1,12 @@
+package TratamentoExceptions;
+
 import javax.swing.*;
 import java.io.*;
 
 public class CheckedExceptions {
 
     public static void main(String[] args) {
-        String nomeDoArquivo = "romancesblake-crouch.txt";
+        String nomeDoArquivo = "romances-blake-crouch.txt";
 
         try {
             imprimirArquivoConsole(nomeDoArquivo);
