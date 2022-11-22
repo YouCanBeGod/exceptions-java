@@ -1,7 +1,7 @@
 <h1>
 TRATAMENTO DE EXCEÇÕES EM JAVA</h1>
 
-  Disponibilizado com ♥ por [cami-la](https://www.linkedin.com/in/cami-la/ "cami-la").
+  Curso ministrado com ♥ por [cami-la](https://www.linkedin.com/in/cami-la/ "cami-la"). Instrutora da DIO.
   
   <h2>✨ ️Redes Socias</h2>
 <p align="center">
