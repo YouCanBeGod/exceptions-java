@@ -13,6 +13,8 @@ public class UncheckedException {
             //Imprimindo mensagem de orientação + mensagem do erro (nem sempre recomendado)
             JOptionPane.showMessageDialog(null, "Entrada inválida, informe um número inteiro! " + e.getMessage());
             //e.printStackTrace(); //caso queira imprimir StackTrace
+        } catch (ArithmeticException e) {
+            JOptionPane.showMessageDialog(null, "Impossível dividir um número por 0.");
         } finally {
             System.out.println("Chegou no finally"); //Opcional
         }
