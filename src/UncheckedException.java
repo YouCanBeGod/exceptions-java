@@ -6,8 +6,18 @@ public class UncheckedException {
         String a = JOptionPane.showInputDialog("Numerador: ");
         String b = JOptionPane.showInputDialog("Denominador: ");
 
-        int resultado = dividir(Integer.parseInt(a), Integer.parseInt(b));
-        System.out.println("Resultado: " + resultado);
+        try {
+            int resultado = dividir(Integer.parseInt(a), Integer.parseInt(b));
+            System.out.println("Resultado: " + resultado);
+        } catch (NumberFormatException e) {
+            //Imprimindo mensagem de orientação + mensagem do erro (nem sempre recomendado)
+            JOptionPane.showMessageDialog(null, "Entrada inválida, informe um número inteiro! " + e.getMessage());
+            //e.printStackTrace(); //caso queira imprimir StackTrace
+        } finally {
+            System.out.println("Chegou no finally"); //Opcional
+        }
+
+        System.out.println("O código continua...");
     }
 
     public static int dividir(int a, int b) {
